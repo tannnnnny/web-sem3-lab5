@@ -44,18 +44,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (document.cookie) {
         const cookieValue = document.cookie.split('=')[1];
-        const userConfirmed = confirm(`The reversed number from cookies is: ${cookieValue}. After pressing "OK", the data will be deleted.`);
+        const userConfirmed = confirm(`The reversed number from cookies is: ${cookieValue}. After pressing "OK", you need to refresh the page manually to see the changes.`);
 
         if (userConfirmed) {
             document.cookie = "reversedNumber=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
 
-            alert("Cookies have been deleted. The page will reload.");
-
-            window.location.reload();
-            return;
-        } else {
-            return;
+            alert("Cookies have been deleted. Please refresh the page manually to see the changes.");
         }
+        return;
     }
 
     div4.innerHTML = `
@@ -89,13 +85,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.cookie = `reversedNumber=${reversedArea}; path=/`;
 
                 resultContainer.innerHTML = '';
-                window.location.reload();
             });
         } else {
             alert("Please enter valid positive numbers for both side and radius.");
         }
     });
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
