@@ -77,10 +77,10 @@
     border-bottom-width: 2px;
 
     #colorPickerBtn {
-        height: 30px;  
-        padding: 5px 15px; 
-        font-size: 14px; 
-        cursor: pointer; 
+        height: 30px;
+        padding: 5px 15px;
+        font-size: 14px;
+        cursor: pointer;
     }
 }
 
@@ -102,8 +102,8 @@
     height: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     border-bottom-style: solid;
     border-bottom-width: 2px;
 }
@@ -121,10 +121,10 @@
 }
 
 #resultContainer {
-    margin-top: 20px; 
+    margin-top: 20px;
+    justify-content: space-between;
+    padding: 10px;
 }
-
-
 
 
 #div6 {
@@ -145,7 +145,7 @@
     border-left-style: solid;
     border-right-width: 2px;
     border-left-width: 3px;
-    padding-left: 5px;  
+    padding-left: 5px;
     padding-right: 5px;
 
     p {
@@ -204,70 +204,71 @@ div {
 
 @media screen and (max-width: 600px) {
 
-  #div1{
-    p {
-        font-size: 10px;
-        width: 250px;
+    #div1 {
+        p {
+            font-size: 10px;
+            width: 250px;
+        }
     }
-  }
 
-  #divX {
-    width: 20%;
-    height: 50px;
+    #divX {
+        width: 20%;
+        height: 50px;
 
-    h1 {
-        font-size: 15px;
-        text-align: center;
+        h1 {
+            font-size: 15px;
+            text-align: center;
+        }
     }
-}
-#div2{
-    p {
-        font-size: 10px;
-        width: 80px;
-    }
-  }
 
-  #div3{
-    p {
-        font-size: 10px;
-        width: 250px;
+    #div2 {
+        p {
+            font-size: 10px;
+            width: 80px;
+        }
     }
-  }
 
-  #div4{
-    p {
-        font-size: 10px;
-        width: 150px;
+    #div3 {
+        p {
+            font-size: 10px;
+            width: 250px;
+        }
     }
-  }
 
-  #div5{
-    h1 {
-        font-size: 20px;
+    #div4 {
+        p {
+            font-size: 10px;
+            width: 150px;
+        }
     }
-  }
 
-  #div6{
-    p {
-        font-size: 10px;
-        width: 170px;
+    #div5 {
+        h1 {
+            font-size: 20px;
+        }
     }
-  }
 
-  #div7{
-    p {
-        font-size: 10px;
-        width: 300px;
+    #div6 {
+        p {
+            font-size: 10px;
+            width: 170px;
+        }
     }
-  }
 
-  #divY {
-    width: 20%;
-    height: 50px;
-    padding-left: 5px;
-
-    h1 {
-        font-size: 15px;
+    #div7 {
+        p {
+            font-size: 10px;
+            width: 300px;
+        }
     }
-}
+
+    #divY {
+        width: 20%;
+        height: 50px;
+        padding-left: 5px;
+
+        h1 {
+            font-size: 15px;
+        }
+    }
 }

@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", function () {
     function updateBorders(color) {
         const blocks = document.querySelectorAll('#div1, #div2, #div3, #div4, #div5, #div6, #div7');
