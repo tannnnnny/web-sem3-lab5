@@ -125,6 +125,75 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const divX = document.getElementById("divX");
+    const div1 = document.getElementById("div1");
+
+    divX.addEventListener("click", () => {
+        div1.innerHTML = `
+            <form id="cssForm">
+                <label for="cssProperty">CSS Property:</label>
+                <input type="text" id="cssProperty" placeholder="e.g., color">
+                <label for="cssValue">Value:</label>
+                <input type="text" id="cssValue" placeholder="e.g., red">
+            </form>
+
+            <form id="cssForm2">
+                <button id="applyCss">Apply CSS</button>
+                <button id="saveCss">Save CSS</button>
+                <button id="clearCss">Clear CSS</button>
+            </form>
+        `;
+
+        const applyCssButton = document.getElementById("applyCss");
+        const saveCssButton = document.getElementById("saveCss");
+        const clearCssButton = document.getElementById("clearCss");
+        const cssPropertyInput = document.getElementById("cssProperty");
+        const cssValueInput = document.getElementById("cssValue");
+
+        applyCssButton.addEventListener("click", (event) => {
+            event.preventDefault(); 
+            const property = cssPropertyInput.value;
+            const value = cssValueInput.value;
+
+            if (property && value) {
+                div1.style[property] = value;
+            } else {
+                alert("Please fill in both fields.");
+            }
+        });
+
+        saveCssButton.addEventListener("click", (event) => {
+            event.preventDefault(); 
+            const property = cssPropertyInput.value;
+            const value = cssValueInput.value;
+
+            if (property && value) {
+                const savedStyles = JSON.parse(localStorage.getItem("savedCss")) || {};
+                savedStyles[property] = value;
+                localStorage.setItem("savedCss", JSON.stringify(savedStyles));
+                alert("CSS rule has been saved.");
+            } else {
+                alert("Please fill in both fields.");
+            }
+        });
+
+        clearCssButton.addEventListener("click", (event) => {
+            event.preventDefault(); 
+            localStorage.removeItem("savedCss");
+            div1.style = ""; 
+            alert("All CSS rules have been cleared.");
+        });
+    });
+
+    const savedStyles = JSON.parse(localStorage.getItem("savedCss"));
+    if (savedStyles) {
+        for (const [property, value] of Object.entries(savedStyles)) {
+            div1.style[property] = value;
+        }
+    }
+    
+});
 
 
 
